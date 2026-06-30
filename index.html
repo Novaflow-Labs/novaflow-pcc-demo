@@ -353,6 +353,33 @@
   .hc .dotr{width:6px;height:6px;border-radius:50%;background:var(--red)}
   .hc .hx{font-family:var(--mono);color:var(--faint);font-size:9.5px}
 
+  /* testimonials */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1010px;margin:0 auto}
+  @media(max-width:880px){.quotes{grid-template-columns:1fr}}
+  .quote{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 22px 18px;box-shadow:var(--sh);display:flex;flex-direction:column}
+  .quote .qm{font-family:var(--display);font-size:40px;line-height:.4;color:var(--brand);height:22px}
+  .quote .qt{font-size:14px;line-height:1.6;color:var(--ink2);margin:10px 0 18px;flex:1}
+  .quote .qt b{color:var(--ink);font-weight:700}
+  .quote .qa{display:flex;align-items:center;gap:11px}
+  .quote .qav{width:40px;height:40px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;font-size:13px;color:#fff}
+  .quote .qn{font-size:13px;font-weight:700;letter-spacing:-.01em}
+  .quote .qr{font-size:11px;color:var(--muted)}
+  .quote .qlogo{margin-left:auto;height:20px;max-width:74px;object-fit:contain;filter:grayscale(1);opacity:.55}
+  /* human in the loop */
+  .hitl{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;max-width:880px;margin:26px auto 0;border:1px solid var(--line2);background:var(--soft);border-radius:16px;padding:16px 22px}
+  .hitl .ht{font-family:var(--display);font-size:16px;font-weight:500;color:var(--ink)}
+  .hitl .hd{font-size:12.5px;color:var(--muted);flex:1;min-width:240px}
+  .hitl .hd b{color:var(--ink);font-weight:600}
+  .hitl .hch{display:flex;gap:7px;flex-wrap:wrap}
+  .hitl .hchip{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--brand);background:var(--brand-t);border:1px solid var(--line2);border-radius:999px;padding:5px 11px}
+  /* guarantee */
+  .guarantee{display:flex;align-items:center;gap:18px;max-width:860px;margin:26px auto 0;background:linear-gradient(100deg,var(--brand),#7d5cff);color:#fff;border-radius:18px;padding:22px 26px;box-shadow:0 20px 44px -18px rgba(81,47,235,.55)}
+  @media(max-width:540px){.guarantee{flex-direction:column;text-align:center}}
+  .guarantee .gi{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;font-size:22px;font-weight:800;flex:none}
+  .guarantee .gt{font-family:var(--display);font-size:20px;font-weight:500;margin-bottom:4px}
+  .guarantee .gd{font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.92)}
+  .guarantee .gd b{color:#fff;font-weight:700}
+
   /* trust */
   .trust{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:880px;margin:0 auto}
   .tpill{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink2);border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 15px;box-shadow:var(--sh-sm)}
@@ -781,19 +808,33 @@
 <!-- KARINA AT SCALE -->
 <section class="band">
   <div class="wrap">
-    <div class="sec-h reveal"><div class="sec-k">FOR KARINA · FIRST 14 DAYS</div><h2>One resident, multiplied across 16 buildings</h2><p>What the same engine surfaced portfolio-wide in two weeks.</p></div>
-    <div class="mgrid">
-      <div class="metric reveal"><div class="mv p" data-to="5800" data-suf="">0</div><div class="ml">Misc-tab documents read</div><div class="md">0 read by existing tools</div></div>
-      <div class="metric reveal"><div class="mv" data-to="312" data-suf="">0</div><div class="ml">Clinical findings extracted</div><div class="md">bruises · falls · wounds · med changes</div></div>
-      <div class="metric reveal"><div class="mv r" data-to="23" data-suf="">0</div><div class="ml">High-priority gaps · missing follow-up</div><div class="md">surfaced to DONs before survey</div></div>
-      <div class="metric reveal"><div class="mv g" data-to="96" data-suf=" hrs">0</div><div class="ml">DON review hours saved</div><div class="md">read only the 23 that matter</div></div>
+    <div class="sec-h reveal"><div class="sec-k">FROM THE CLINICIANS WHO USE IT</div><h2>Hours back, every week</h2><p>What clinical and research teams say about the time NovaFlow gives back.</p></div>
+    <div class="quotes">
+      <div class="quote reveal">
+        <span class="qm">&ldquo;</span>
+        <div class="qt">Outside consult notes used to sit unread for days. NovaFlow reads every one the moment it lands — it gave my team back the hours we were losing to manual chart review.</div>
+        <div class="qa"><div class="qav" style="background:linear-gradient(135deg,#8e1230,#c0455e)">G</div><div><div class="qn">Dr. Gill</div><div class="qr">Keck School of Medicine, USC</div></div><img class="qlogo" src="assets/usc.svg" alt="USC"></div>
+      </div>
+      <div class="quote reveal">
+        <span class="qm">&ldquo;</span>
+        <div class="qt">It's the first tool that <b>reduced</b> my team's documentation load instead of adding to it. Work that used to take days of manual review now takes minutes.</div>
+        <div class="qa"><div class="qav" style="background:linear-gradient(135deg,#8c1515,#b8454f)">S</div><div><div class="qn">Dr. Schuele</div><div class="qr">Stanford</div></div><img class="qlogo" src="assets/stanford.svg" alt="Stanford"></div>
+      </div>
+      <div class="quote reveal">
+        <span class="qm">&ldquo;</span>
+        <div class="qt">I stopped opening PDFs one by one. The findings come to me, ranked — I review the few that matter and move on. Easily <b>30 hours a month</b> back for my nurses.</div>
+        <div class="qa"><div class="qav" style="background:linear-gradient(135deg,var(--brand),#7d5cff)">DN</div><div><div class="qn">Director of Nursing</div><div class="qr">Skilled-nursing pilot</div></div></div>
+      </div>
     </div>
-    <div class="roi reveal">
-      <div class="big">≈ <b>4 likely F-Tag citations</b> averted · ~$15K each = <b>~$60K downside avoided</b> in 14 days</div>
-      <div class="sm">Time-to-flag dropped from <b>days-to-never</b> to <b>9 seconds</b>. 100% Miscellaneous-tab coverage, up from 0%.</div>
+    <div class="hitl reveal">
+      <div class="ht">A human is always in the loop.</div>
+      <div class="hd">You get the software <b>and</b> our engineers — in your building, side-by-side with your staff, accelerating your workflows. Plus async support whenever you need it.</div>
+      <div class="hch"><span class="hchip">Caltech engineers</span><span class="hchip">PhDs</span><span class="hchip">On-site</span><span class="hchip">Zoom</span></div>
     </div>
-    <div class="lbl reveal" style="margin-top:26px;text-align:center">Portfolio · open-risk status by facility</div>
-    <div class="heat reveal" id="heat"></div>
+    <div class="guarantee reveal">
+      <div class="gi">✓</div>
+      <div><div class="gt">Our promise to Complete Care</div><div class="gd">We'll save your team <b>30+ hours of manual data entry and chart review</b> in the first month — or your money back. No fine print.</div></div>
+    </div>
   </div>
 </section>
 
@@ -934,7 +975,7 @@ document.querySelectorAll('.ag').forEach(a=>a.addEventListener('click',()=>gotoS
 
 /* portfolio heat */
 const FAC=[["Riverview",2,"r"],["Hamilton Plaza",1,"a"],["Linwood",0,"g"],["Whiting",1,"a"],["Toms River",2,"r"],["Bergen",0,"g"],["Edison",0,"g"],["Cherry Hill",1,"a"],["Vineland",0,"g"],["Clifton",0,"g"],["Newark Manor",1,"a"],["Trenton",0,"g"],["Brick",0,"g"],["Wayne",0,"g"],["Paramus",1,"a"],["Atlantic",0,"g"]];
-document.getElementById('heat').innerHTML=FAC.map(([n,c,s])=>`<div class="hc"><div class="hn">${n}</div><div class="hb"><span class="dot${s}"></span><span class="hx">${c?c+' open':'clear'}</span></div></div>`).join('');
+const _heatEl=document.getElementById('heat');if(_heatEl)_heatEl.innerHTML=FAC.map(([n,c,s])=>`<div class="hc"><div class="hn">${n}</div><div class="hb"><span class="dot${s}"></span><span class="hx">${c?c+' open':'clear'}</span></div></div>`).join('');
 
 /* scroll reveal + count-up */
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.classList.contains('metric')){const el=e.target.querySelector('.mv');if(el&&!el.dataset.done){el.dataset.done=1;countUp(el);}}io.unobserve(e.target);}});},{threshold:.2});
