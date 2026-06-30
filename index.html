@@ -434,6 +434,55 @@
 
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
+
+  /* ---- mobile / phone ---- */
+  @media(max-width:760px){
+    .wrap{padding:0 16px}
+    .hero{padding:50px 0 24px}
+    h1{font-size:clamp(25px,6.6vw,40px);overflow-wrap:break-word}
+    h1 br{display:none}
+    .chip{font-size:10.5px;padding:6px 11px;letter-spacing:0;max-width:100%}
+    .lede{font-size:15px}
+    .prep{display:none}
+    .stage{border-radius:16px}
+    /* let scenes flow at natural height instead of clipping a fixed box */
+    .canvas{min-height:0}
+    .scene{position:relative;overflow:visible;padding:20px 15px}
+    .scene:not(.show){display:none}
+    .scap{flex-wrap:wrap}
+    .scap h3{font-size:15px}
+    .ag{min-width:132px;padding:12px 11px}
+    /* controls wrap so nothing overflows */
+    .ctrl{flex-wrap:wrap;gap:10px;padding:12px}
+    .prog{order:5;flex-basis:100%}
+    .speed{margin-left:auto}
+    .ner,.obs,.alert,.rule-grid,.clinfig,.bb,.price,.ba,.learn-grid{grid-template-columns:1fr!important}
+    .mgrid{grid-template-columns:1fr 1fr}
+    .heat{grid-template-columns:repeat(2,1fr)}
+    .bblist{flex-direction:row;flex-wrap:wrap}
+    .bbtool{flex:1 1 44%}
+    .ccode{font-size:11.5px}
+    .arow .k,.ar .k{width:118px}
+    .term-body{min-height:200px;font-size:11.4px}
+    .clinfig{padding:16px}
+    .cf-img{max-width:240px;margin:0 auto}
+    /* keep dense flex rows inside the viewport */
+    .pcc-top{flex-wrap:wrap}
+    .pcc-top .pid{margin-left:0;text-align:left;width:100%;margin-top:2px}
+    .pcc-tabs{flex-wrap:nowrap;overflow-x:auto}
+    .doc>div{min-width:0}
+    .doc .dn{white-space:normal;overflow-wrap:anywhere}
+    .ent .txt{overflow-wrap:anywhere}
+    .ent .code{flex:none}
+    .tier{flex-wrap:wrap}
+    .stages{gap:6px}
+    .stg{font-size:10px;padding:4px 8px}
+  }
+  @media(max-width:420px){
+    .mgrid{grid-template-columns:1fr}
+    .bbtool{flex:1 1 100%}
+    .pcc-top .pid{font-size:9px}
+  }
 </style>
 </head>
 <body>
@@ -779,7 +828,7 @@
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Read-only to your Misc tab · runs on real backlog</li>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Continue or walk after month 1 — no lock-in</li>
         </ul>
-        <button class="pbtn" onclick="alert('Let’s schedule the Riverview pilot kickoff.')">Start the Riverview pilot</button>
+        <a class="pbtn" href="https://calendly.com/logan-novaflowapp/30min" target="_blank" rel="noopener">Start the Riverview pilot</a>
       </div>
       <div class="pc feat reveal">
         <div class="pk">YEAR ONE · ALL 16 FACILITIES</div>
@@ -791,7 +840,7 @@
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Your monthly pilot fees credit toward year one</li>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>One averted citation ≈ pays for the year</li>
         </ul>
-        <button class="pbtn pri" onclick="alert('Welcome to NovaFlow, Complete Care.')">Lock the founding rate</button>
+        <a class="pbtn pri" href="https://calendly.com/logan-novaflowapp/30min" target="_blank" rel="noopener">Lock the founding rate</a>
       </div>
     </div>
     <div class="pnote reveal">If the pilot finds nothing actionable, you owe nothing.</div>
